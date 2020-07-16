@@ -1,7 +1,6 @@
 package test;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 public class Customer {
 
@@ -11,8 +10,7 @@ public class Customer {
   private LocalDateTime customerLastRequestTimeStamp;
   private long customerWaitingPeriodInSecond;
 
-  public Customer( String customerName,  int customerRequestLimit,
-                      long customerWaitingPeriod) {
+  public Customer(String customerName, int customerRequestLimit, long customerWaitingPeriod) {
     this.customerName = customerName;
     this.customerRequestLimit = customerRequestLimit;
     this.customerRequestCounter = 0;// at first customer request counter is 0
@@ -59,6 +57,5 @@ public class Customer {
   public void setCustomerWaitingPeriodInSeconds(long customerWaitingPeriod) {
     this.customerWaitingPeriodInSecond = customerWaitingPeriod;
   }
-
 
 }
