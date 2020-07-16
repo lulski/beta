@@ -21,7 +21,6 @@ public class RateLimiter {
     LocalDateTime custLastRequestPlusWaitPeriod = customer.getCustomerLastRequestTimeStamp()
         .plusSeconds(customer.getCustomerWaitingPeriodInSeconds());
 
-
     // compare request made vs max permitted requests
     if (customer.getCustomerRequestCounter() < customer.getCustomerRequestLimit()) {
       return requestPermitted(customer);
@@ -33,7 +32,6 @@ public class RateLimiter {
         return requestPermittedCustomerWaitPeriodHasPassed(customer);
 
       }
-
 
       return requestDenied(customer);
     }
