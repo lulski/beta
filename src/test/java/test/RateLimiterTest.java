@@ -2,12 +2,14 @@ package test;
 
 import static org.junit.Assert.assertFalse;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class RateLimiterTest {
 
 
   @Test
+  @Ignore
   public void customer_makeMaxAllocatedLimit() throws InterruptedException {
 
       RateLimiter server1Limiter = new RateLimiter();
